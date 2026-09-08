@@ -190,6 +190,10 @@ button:focus-visible, input:focus-visible { outline: 3px solid rgba(47, 165, 124
 
 .toast { position: fixed; left: 50%; bottom: calc(78px + env(safe-area-inset-bottom)); z-index: 20; max-width: calc(100% - 40px); padding: 11px 16px; color: #fff; background: rgba(31,42,42,.92); border-radius: 10px; font-size: 12px; font-weight: 650; letter-spacing: -.035em; transform: translateX(-50%); animation: toast-in .2s ease-out; }
 .offline-badge { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 15; display: flex; align-items: center; gap: 4px; padding: 6px 8px; color: #9aa7a4; background: rgba(245,247,247,.72); border-radius: 7px; font-size: 10px; pointer-events: none; }
+.toss-banner-ad { width: calc(100% + 40px); min-height: 96px; margin: 22px -20px 0; overflow: hidden; }
+.toss-banner-ad-slot { width: 100%; min-height: 96px; }
+.toss-banner-ad-no-fill, .toss-banner-ad-error { display: none; }
+.toss-banner-ad-fallback { margin: 22px 0 0; padding: 16px; color: var(--subtle); background: #edf2f1; border-radius: 12px; font-size: 11px; text-align: center; }
 @keyframes toast-in { from { opacity: 0; transform: translate(-50%, 6px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
 @media (min-width: 600px) {

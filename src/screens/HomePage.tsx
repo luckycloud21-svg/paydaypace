@@ -2,6 +2,7 @@ import { Edit, Info, Plus, Settings, Trash } from '../components/Icons';
 import AppHeader from '../components/AppHeader';
 import PrimaryButton from '../components/PrimaryButton';
 import StatCard from '../components/StatCard';
+import TossBannerAd from '../components/TossBannerAd';
 import { calculateSummary } from '../lib/budgetCalculator';
 import { formatDate, shortDate, todayKey } from '../lib/dateRules';
 import { formatWon } from '../lib/format';
@@ -57,6 +58,7 @@ export default function HomePage({ data, onNavigate, onEditSpend, onDeleteSpend 
         )}
 
         <div className="privacy-note"><Info size={16} /><span>입력한 예산과 지출은 이 기기에만 저장돼요.</span></div>
+        <TossBannerAd />
       </main>
     </div>
   );
