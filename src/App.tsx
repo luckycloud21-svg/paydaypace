@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Info } from './components/Icons';
 import Toast from './components/Toast';
 import HomePage from './screens/HomePage';
 import ReportPage from './screens/ReportPage';
@@ -112,9 +111,5 @@ export default function App() {
     content = <SharePage summary={calculateSummary(data, todayKey())} settings={data.settings} onBack={() => setScreen('report')} onSettingChange={handleSettingsChange} onShare={handleShare} />;
   }
 
-  return <><div className="app-shell">{content}</div>{toast && <Toast message={toast} />}<OfflineBadge /></>;
-}
-
-function OfflineBadge() {
-  return <div className="offline-badge"><Info size={14} /> 기기에서 안전하게 작동해요</div>;
+  return <><div className="app-shell">{content}</div>{toast && <Toast message={toast} />}</>;
 }
