@@ -31,7 +31,7 @@ npm run build
 npm run bundle
 ```
 
-`npm run bundle`은 `dist/`를 만든 뒤 현재 앱인토스 WebView SDK 3.x CLI로 `paydaypace.ait` 이름의 번들을 생성합니다.
+`npm run bundle`은 `dist/`를 만든 뒤 현재 앱인토스 WebView SDK 3.x CLI로 `paydaypacekr.ait` 이름의 번들을 생성합니다.
 
 ## 앱인토스 콘솔에서 출시 전 교체할 항목
 

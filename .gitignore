@@ -1,6 +1,7 @@
 node_modules/
 dist/
 *.ait
+*.ait.*
 *.tsbuildinfo
 .env
 .env.*

@@ -1,6 +1,6 @@
 import { getTossShareLink, share } from '@apps-in-toss/web-framework';
 
-const APP_NAME = 'paydaypace';
+const APP_NAME = 'paydaypacekr';
 
 export async function shareText(message: string): Promise<'native' | 'browser' | 'copied'> {
   try {
