@@ -17,7 +17,7 @@ type SpendPageProps = {
 const QUICK_AMOUNTS = [1_000, 5_000, 10_000, 30_000];
 
 export default function SpendPage({ data, editingEntry, onSave, onBack }: SpendPageProps) {
-  const [amount, setAmount] = useState(editingEntry?.amount ?? 8_900);
+  const [amount, setAmount] = useState(editingEntry?.amount ?? 0);
   const [memo, setMemo] = useState(editingEntry?.memo ?? '');
   const [error, setError] = useState('');
   const currentSummary = calculateSummary(data, todayKey());
@@ -49,7 +49,7 @@ export default function SpendPage({ data, editingEntry, onSave, onBack }: SpendP
       <main className="page-content spend-content">
         <div className="page-intro"><span className="section-kicker">금액만 입력하면 충분해요</span><h1>{editingEntry ? '지출을 수정할까요?' : '오늘 얼마 썼나요?'}</h1></div>
         <section className="form-section spend-form">
-          <AmountInput label="지출 금액" value={amount} onChange={setAmount} autoFocus />
+          <AmountInput label="지출 금액" value={amount} onChange={setAmount} showZero autoFocus />
           <div className="quick-inputs"><span>빠른 입력</span><div>{QUICK_AMOUNTS.map((quick) => <button key={quick} onClick={() => setAmount(quick)}>{quick >= 10_000 ? `${quick / 10_000}만` : `${quick / 1_000}천`}</button>)}</div></div>
           <div className="field-group memo-group"><div className="label-row"><label htmlFor="memo">메모 <em>(선택)</em></label><span>{memoCount}</span></div><input id="memo" maxLength={20} value={memo} onChange={(event) => setMemo(event.target.value)} placeholder="예: 점심 식사" /></div>
           <div className={`entry-preview ${previewRemaining < 0 ? 'preview-alert' : ''}`}><span>입력 후 변화</span><strong>{previewRemaining < 0 ? `오늘 예산 ${formatWon(Math.abs(previewRemaining))} 초과` : `오늘 ${formatWon(previewRemaining)} 남음`}</strong><small>내일 예상 {formatWon(previewTomorrow)}</small></div>

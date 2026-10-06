@@ -8,9 +8,10 @@ type AmountInputProps = {
   placeholder?: string;
   hint?: string;
   autoFocus?: boolean;
+  showZero?: boolean;
 };
 
-export default function AmountInput({ label, value, onChange, placeholder = '0', hint, autoFocus }: AmountInputProps) {
+export default function AmountInput({ label, value, onChange, placeholder = '0', hint, autoFocus, showZero = false }: AmountInputProps) {
   const id = useId();
   return (
     <div className="field-group">
@@ -20,7 +21,7 @@ export default function AmountInput({ label, value, onChange, placeholder = '0',
           id={id}
           inputMode="numeric"
           autoFocus={autoFocus}
-          value={value ? formatInput(String(value)) : ''}
+          value={value || showZero ? formatInput(String(value)) : ''}
           onChange={(event) => onChange(Math.min(parseInput(event.target.value), 99_999_999))}
           placeholder={placeholder}
           aria-label={label}
