@@ -16,7 +16,14 @@ export function ChevronDown(props: IconProps) { return <BaseIcon {...props}><pat
 export function Check(props: IconProps) { return <BaseIcon {...props}><path d="m5 12 4 4L19 6" /></BaseIcon>; }
 export function Plus(props: IconProps) { return <BaseIcon {...props}><path d="M12 5v14M5 12h14" /></BaseIcon>; }
 export function MoreHorizontal(props: IconProps) { return <BaseIcon {...props}><circle cx="5" cy="12" r="1" fill="currentColor" stroke="none" /><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" /><circle cx="19" cy="12" r="1" fill="currentColor" stroke="none" /></BaseIcon>; }
-export function Settings(props: IconProps) { return <BaseIcon {...props}><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" /><path d="m19.4 15 .1.1a1.9 1.9 0 0 1-2.7 2.7l-.1-.1a1.9 1.9 0 0 0-3.2 1.3v.2a1.9 1.9 0 0 1-3.8 0V19a1.9 1.9 0 0 0-3.2-1.3l-.1.1a1.9 1.9 0 0 1-2.7-2.7l.1-.1A1.9 1.9 0 0 0 2.5 12a1.9 1.9 0 0 1 0-3.8h.2a1.9 1.9 0 0 0 1.3-3.2l-.1-.1a1.9 1.9 0 0 1 2.7-2.7l.1.1A1.9 1.9 0 0 0 10 2.5v-.2a1.9 1.9 0 0 1 3.8 0v.2a1.9 1.9 0 0 0 3.2 1.3l.1-.1a1.9 1.9 0 0 1 2.7 2.7l-.1.1A1.9 1.9 0 0 0 21.5 10h.2a1.9 1.9 0 0 1 0 3.8h-.2a1.9 1.9 0 0 0-2.1 1.2Z" transform="scale(.82) translate(2.63 2.63)" /></BaseIcon>; }
+export function Settings(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M10 5 L10.5 2.5 L13.5 2.5 L14 5 L15.54 5.64 L17.66 4.22 L19.78 6.34 L18.36 8.46 L19 10 L21.5 10.5 L21.5 13.5 L19 14 L18.36 15.54 L19.78 17.66 L17.66 19.78 L15.54 18.36 L14 19 L13.5 21.5 L10.5 21.5 L10 19 L8.46 18.36 L6.34 19.78 L4.22 17.66 L5.64 15.54 L5 14 L2.5 13.5 L2.5 10.5 L5 10 L5.64 8.46 L4.22 6.34 L6.34 4.22 L8.46 5.64 Z" />
+      <circle cx="12" cy="12" r="3.2" />
+    </BaseIcon>
+  );
+}
 export function Calendar(props: IconProps) { return <BaseIcon {...props}><rect x="3.5" y="5" width="17" height="15" rx="2" /><path d="M8 3v4M16 3v4M3.5 9h17" /></BaseIcon>; }
 export function Share(props: IconProps) { return <BaseIcon {...props}><circle cx="18" cy="5" r="2.5" /><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="19" r="2.5" /><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4" /></BaseIcon>; }
 export function Trash(props: IconProps) { return <BaseIcon {...props}><path d="M4 7h16M10 11v5M14 11v5M6.5 7l.7 12.2a1.7 1.7 0 0 0 1.7 1.6h6.2a1.7 1.7 0 0 0 1.7-1.6L17.5 7M9 7V4.5h6V7" /></BaseIcon>; }
